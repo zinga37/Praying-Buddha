@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imgs/922a43c7100bec5adbe08fe47aea7003.jpeg');
+    background-size: 30% auto; /* 图片大小为视口宽度的30% */
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: breathe 10s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02); /* 微小的缩放效果 */
+    }
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.7);
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+}
+
+main {
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    padding-bottom: 10vh;
+}
+
+#taiji-section {
+    margin-bottom: 20px;
+}
+
+.taiji-container {
+    width: 200px;
+    height: 200px;
+}
+
+#taiji-btn {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+#taiji-btn svg {
+    width: 100%;
+    height: 100%;
+}
+
+#taiji-btn:hover {
+    transform: rotate(180deg);
+}
+
+#chat {
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(26, 26, 26, 0.6);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+#chat h2 {
+    margin-top: 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+#chat-history {
+    flex-grow: 1;
+    overflow-y: auto;
+    border: 1px solid #333333;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    max-height: 300px;
+}
+
+.input-area {
+    display: flex;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    background-color: rgba(26, 26, 26, 0.8);
+    color: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 5px 0 0 5px;
+}
+
+#send-btn {
+    padding: 0.5rem 1rem;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.7);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
